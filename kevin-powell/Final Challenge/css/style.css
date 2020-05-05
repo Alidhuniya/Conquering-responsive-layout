@@ -244,6 +244,16 @@ a {
   margin-left: 4rem;
 }
 
+.mainContainer__dv {
+  margin-top: -15rem;
+}
+
+@media all and (min-width: 501px) and (max-width: 1000px), (max-width: 500px) {
+  .mainContainer__dv {
+    margin-top: 0rem;
+  }
+}
+
 .mainContainer__p {
   max-width: 49ch;
   color: #cecece;
@@ -263,5 +273,54 @@ a {
   padding: 0.7rem 2rem 0.7rem 2rem;
   border-radius: 35px;
   letter-spacing: 0.2rem;
+}
+
+.main__section {
+  background: #edecec;
+  padding: 8rem 2rem 8rem 2rem;
+}
+
+.section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.section__dv {
+  margin-top: 2rem;
+}
+
+.section__dv + .section__dv {
+  margin-left: 10rem;
+}
+
+@media all and (max-width: 1333px) {
+  .section__dv + .section__dv {
+    margin-left: 0rem;
+  }
+}
+
+.section__h3 {
+  font-size: 1.9rem;
+  text-align: center;
+  color: #A59678;
+  font-weight: 900;
+}
+
+.section__p {
+  font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.9;
+  text-align: center;
+  max-width: 36ch;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  color: #6e6c6c;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
 }
 /*# sourceMappingURL=style.css.map */

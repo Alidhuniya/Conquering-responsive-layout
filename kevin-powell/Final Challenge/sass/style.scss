@@ -195,7 +195,7 @@ a {
 
 .mainContainer__leftContent {
     align-self: flex-end;
-
+    
     @media all and #{$break2} {
        align-self: flex-start;
        margin-top: 3rem;
@@ -211,6 +211,14 @@ a {
 
   
 }
+
+.mainContainer__dv {
+    margin-top: -15rem;
+
+    @media all and #{$break2},#{$break1} {
+        margin-top: 0rem;
+    }
+}
 .mainContainer__p {
     max-width: 49ch;
     color: #cecece;
@@ -220,6 +228,8 @@ a {
 }
 .mainContainer__dv1 {
     margin-top: 3rem;
+
+   
 }
 .mainContainer__a {
     background-color: $lightYellow;
@@ -228,4 +238,46 @@ a {
     padding: 0.7rem 2rem 0.7rem 2rem;
     border-radius: 35px;
     letter-spacing: 0.2rem;
+}
+
+// section
+
+.main__section {
+    background: #edecec;
+    padding: 8rem 2rem 8rem 2rem;
+    
+}
+.section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.section__dv {
+    margin-top: 2rem;
+}
+.section__dv + .section__dv {
+    
+    margin-left: 10rem;
+
+    @media all and (max-width: 1333px) {
+        margin-left: 0rem;
+    }
+}
+.section__h3 {
+    font-size: 1.9rem;
+    text-align: center;
+    color: $lightYellow;
+    font-weight: map-get($fontWeights, "black");
+}
+
+.section__p {
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.9;
+    text-align: center;
+    max-width: 36ch;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    color: #6e6c6c;
+    font-weight: map-get($fontWeights, "light");
+    letter-spacing: 0.1rem;
 }
