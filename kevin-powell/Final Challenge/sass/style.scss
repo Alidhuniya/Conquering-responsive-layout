@@ -1,0 +1,168 @@
+/*
+reset
+
+variables
+
+advanced variables
+
+mixin
+
+base
+
+header
+    .nav
+
+main
+    .contents 
+    .contents 
+    .contents 
+    .contents 
+    ......
+
+footer
+
+# Basic-responsive first
+# Mobile-first responsive
+
+*/
+
+// reset
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// variables
+
+$dark: #2E323F;
+$semiDark: #3B4050;
+$lightDark: #6F737F;
+$white: #fff;
+$lightYellow: #A59678;
+// breakpoints
+$break1: "(max-width:500px)";
+$break2: "(min-width:501px) and (max-width:1000px)";
+$break3: "(min-width:1001px)";
+
+// advanced variables
+$fontWeights: (
+  "light": 400,
+  "bold": 600,
+  "black": 900,
+);
+
+// mixin
+@mixin verticleCentering {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+// base
+
+body {
+    font-family: 'Oswald', 'sans-serif';
+    color: $white;
+
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+    text-transform: uppercase;
+}
+
+
+
+// header 
+
+.header {
+    background-color: $dark;
+    padding: 2rem 10rem 1.5rem 10rem;
+
+    @media all and  #{$break2} {
+      padding:2rem 0rem 1.5rem 0rem;
+    }
+   
+}
+
+// nav
+.nav {
+    display: flex;
+    
+    @media all and  #{$break2}, #{$break1} {
+        @include verticleCentering;
+    }
+
+   
+}
+
+.nav__h3 {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: map-get($fontWeights, "black" );
+}
+
+
+.nav__bar {
+   
+    width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  @media all and  #{$break2} {
+    width: auto;
+}
+
+@media all and  #{$break1} {
+    @include verticleCentering;
+}
+}
+
+.nav__list1 {
+    display: flex;
+    align-self: center;
+}
+
+.nav__list2 {
+    display: flex;
+   
+}
+
+.nav__list1, .nav__list2 {
+    @media all and  #{$break1} {
+        @include verticleCentering;
+    }
+}
+
+.nav__list2Modifier {
+    align-self: center;
+}
+
+.nav__list + .nav__list {
+    margin-left: 3.3rem;
+}
+.nav__list1 + .nav__list2 {
+    margin-left: 4.7rem;
+   
+}
+
+.nav__list + .nav__list, .nav__list1 + .nav__list2 {
+    @media all and  #{$break1} {
+        margin-left: 0rem;
+        margin-top: 1rem;
+    }
+}
+
+.nav__listModifier {
+    background: $lightYellow;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 50px;
+    
+}
