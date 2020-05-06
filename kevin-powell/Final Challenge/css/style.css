@@ -47,6 +47,10 @@ a {
   text-transform: uppercase;
 }
 
+img {
+  max-width: 100%;
+}
+
 .header {
   background-color: #2E323F;
   padding: 2rem 10rem 1.5rem 10rem;
@@ -322,5 +326,109 @@ a {
   color: #6e6c6c;
   font-weight: 400;
   letter-spacing: 0.1rem;
+}
+
+.section1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8rem 5rem 8rem 5rem;
+}
+
+@media all and (max-width: 1101px) {
+  .section1 {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.section1__leftContent + .section1__rightContent {
+  margin-left: 8rem;
+}
+
+@media all and (max-width: 1101px) {
+  .section1__leftContent + .section1__rightContent {
+    margin-left: 0rem;
+  }
+}
+
+.section1__leftContenth1 {
+  color: #A59678;
+  font-size: 2rem;
+}
+
+.section1__p {
+  margin-top: 1.8rem;
+  font-size: 1.4rem;
+  color: #6e6c6c;
+  font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.section1__p1 {
+  margin-top: 2rem;
+  margin-bottom: 4.5rem;
+}
+
+.section1__p2 {
+  margin-top: 3.5rem;
+}
+
+@media all and (max-width: 1101px) {
+  .section1__rightContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media all and (min-width: 501px) and (max-width: 1000px) {
+  .section1__rightContent {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .section1__rightContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.section1__rightDv {
+  background: #3B4050;
+  width: 500px;
+  text-align: center;
+  padding: 3rem;
+  margin-top: 2.5rem;
+}
+
+@media all and (max-width: 1101px) {
+  .section1__rightDv {
+    padding: 1.5rem;
+    width: 600px;
+    margin-left: 2rem;
+  }
+}
+
+@media all and (min-width: 501px) and (max-width: 1000px) {
+  .section1__rightDv {
+    width: 100%;
+    margin-left: 0rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -79,6 +79,10 @@ a {
     text-transform: uppercase;
 }
 
+img {
+    max-width: 100%;
+}
+
 
 // header 
 
@@ -280,4 +284,92 @@ a {
     color: #6e6c6c;
     font-weight: map-get($fontWeights, "light");
     letter-spacing: 0.1rem;
+}
+
+
+// section-1
+
+.section1 {
+    display: flex;
+    padding: 8rem 5rem 8rem 5rem;
+
+    @media all and (max-width:1101px) {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+
+.section1__leftContent + .section1__rightContent {
+    margin-left: 8rem;
+
+    @media all and (max-width:1101px) {
+        margin-left: 0rem;
+   }
+}
+
+
+.section1__leftContenth1 {
+    color: $lightYellow;
+    font-size: 2rem;
+    
+}
+
+.section1__p {
+    margin-top: 1.8rem;
+    font-size: 1.4rem;
+    color: #6e6c6c;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.section1__p1 {
+    margin-top: 2rem;
+    margin-bottom: 4.5rem;
+}
+
+.section1__p2 {
+    margin-top: 3.5rem;
+}
+
+.section1__rightContent {
+    @media all and (max-width:1101px) {
+        //width: 100%;
+       display: flex;
+       justify-content: space-between;
+    //    flex-wrap: wrap;
+
+    }
+
+    @media all and #{$break2} {
+        flex-wrap: wrap;
+    }
+
+    @media all and #{$break1} {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;  
+    }
+}
+
+.section1__rightDv {
+    background: $semiDark;
+    width: 500px;
+    text-align: center;
+    padding: 3rem;
+    margin-top: 2.5rem;
+
+    @media all and (max-width:1101px) {
+        padding: 1.5rem;
+        width: 600px;
+         margin-left: 2rem;
+    }
+
+    @media all and #{$break2} {
+        width: 100%;
+        margin-left: 0rem;
+    }
+
+    @media all and #{$break1} {
+
+    }
 }
